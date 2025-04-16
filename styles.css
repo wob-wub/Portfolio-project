@@ -4,7 +4,6 @@
     align-items: center;
     padding: 1.5rem;
     height: 25px;
-
 }
 
 .topnav nav ul {
@@ -18,7 +17,7 @@
 .topnav nav ul li a {
     text-decoration: none;
     color: bisque; 
-    font-family: "Hind Madurai", sans-serif;
+    font-family: "Rowdies", sans-serif;
     font-size: 1rem;
     font-weight: normal;
 }
@@ -28,58 +27,157 @@
     color: white; /* Pink color */
 }
 
+
 .topnav h1 a {
     text-decoration: none;
-    color:bisque;
-    font-family: "Hind Madurai", sans-serif;
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: bisque;
     font-style: normal;
-    text-align: center;
 }
 .topnav h1 a:hover {
     text-decoration: none;
-    color: bisque; /* Pink color */
+    color: bisque;
 }
-.topnav h1 img{
-    width: 50px;
-    height: 50px;
+
+.topnav h1 img {
+    height: 1.6rem; /* Slightly smaller to match the font's visual height */
+    width: auto;
     margin-right: 10px;
     align-items: center;
-    vertical-align: middle;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     text-align: center;
-    display: block;
-    padding: 2rem;
+    position: relative;
+    z-index: 1;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out;
 }
 main h1 {
-    font-family: "Lato", sans-serif;
-    font-size: 3rem;
-    color:bisque;
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: bisque;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
+
 main p {
-    font-family: "Lato", sans-serif;
+    font-family: "Hind Madurai", sans-serif;
     color: white;
     font-size: 1.5rem;
     margin-bottom: 2rem;
-
+    max-width: 600px;
 }
-main button{
+.cta-button {
+    display: inline-block;
     align-self: center;
     border-radius: 20px;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     font-family: "Lato", sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    ;
+    background-color: bisque;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-body{
-    background-image: url(https://i.ytimg.com/vi/tWXUebPY_tk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgQih_MA8=&rs=AOn4CLAHQAIXE54ouEGgyOs4TIjbywUG_A);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #454545;
-    margin: 0px;
+.cta-button:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    color: bisque;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: bisque;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .topnav h1 {
+        margin-bottom: 1rem;
+    }
+    
+    .topnav nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    main h1 {
+        font-size: 2rem;
+    }
+    
+    main p {
+        font-size: 1.2rem;
+    }
 }

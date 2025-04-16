@@ -1,0 +1,51 @@
+.topnav {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    height: 25px;
+
+
+}
+
+.topnav nav ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.topnav nav ul li a {
+    text-decoration: none;
+    color: bisque; 
+    font-family: "Hind Madurai", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.topnav nav ul li a:hover {
+    text-decoration: none;
+    color: white; /* Pink color */
+}
+
+.topnav h1 a {
+    text-decoration: none;
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: bisque;
+    font-style: normal;
+}
+.topnav h1 a:hover {
+    text-decoration: none;
+    color: bisque; 
+}
+.topnav h1 img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    align-items: center;
+    vertical-align: middle;
+}

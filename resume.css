@@ -1,0 +1,28 @@
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    height: 25px;
+}
+
+.topnav nav ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.topnav nav ul li a {
+    text-decoration: none;
+    color: bisque; 
+    font-family: "Rowdies", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.topnav nav ul li a:hover {
+    text-decoration: none;
+    color: white; /* Pink color */
+}

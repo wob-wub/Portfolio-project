@@ -1,12 +1,9 @@
 .topnav {
     display: flex;
-    background-color: black;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
     height: 25px;
-
-
 }
 
 .topnav nav ul {
@@ -20,7 +17,7 @@
 .topnav nav ul li a {
     text-decoration: none;
     color: bisque; 
-    font-family: "Hind Madurai", sans-serif;
+    font-family: "Rowdies", sans-serif;
     font-size: 1rem;
     font-weight: normal;
 }
@@ -29,6 +26,7 @@
     text-decoration: none;
     color: white; /* Pink color */
 }
+
 
 .topnav h1 a {
     text-decoration: none;
@@ -40,12 +38,44 @@
 }
 .topnav h1 a:hover {
     text-decoration: none;
-    color: bisque; 
+    color: bisque;
 }
-.topnav h1 img{
-    width: 50px;
-    height: 50px;
+
+.topnav h1 img {
+    height: 1.6rem;
+    width: auto;
     margin-right: 10px;
     align-items: center;
-    vertical-align: middle;
+}
+body{
+    background-color: gray;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 2rem; 
+    padding: 2rem;
+}
+
+
+.section {
+   font-size: medium;
+   font-family: "Hind Madurai", sans-serif;
+
+}
+#titles{
+    flex: 1;
+}
+
+
+#about {
+    flex: 2;
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
 }

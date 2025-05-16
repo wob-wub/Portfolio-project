@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&family=Lato:wght@400;700&family=Rowdies&family=Yellowtail&display=swap');
+
+body {
+    margin: 0;
+    background-color: #121212;
+    color: white;
+    font-family: 'Hind Madurai', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* --- Top Navigation Matching Home Page --- */
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -5,28 +27,6 @@
     padding: 1.5rem;
     height: 25px;
 }
-
-.topnav nav ul {
-    display: flex;
-    gap: 1rem;
-    margin: 0px;
-    padding: 0;
-    list-style-type: none;
-}
-
-.topnav nav ul li a {
-    text-decoration: none;
-    color: bisque; 
-    font-family: "Rowdies", sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-.topnav nav ul li a:hover {
-    text-decoration: none;
-    color: white; /* Pink color */
-}
-
 
 .topnav h1 a {
     text-decoration: none;
@@ -36,14 +36,148 @@
     color: bisque;
     font-style: normal;
 }
+
 .topnav h1 a:hover {
     text-decoration: none;
     color: bisque;
 }
 
-.topnav h1 img {
-    height: 1.6rem; /* Slightly smaller to match the font's visual height */
-    width: auto;
-    margin-right: 10px;
-    align-items: center;
+.topnav nav ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.topnav nav ul li a {
+    text-decoration: none;
+    color: bisque;
+    font-family: "Rowdies", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.topnav nav ul li a:hover {
+    color: white;
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out;
+    flex: 1;
+}
+
+main h1 {
+    font-size: 2.8rem;
+    color: bisque;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: bisque;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid bisque;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+h3, h4 {
+    font-size: 1.1rem;
+    color: bisque;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+li ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+li ul li {
+    list-style-type: disc;
+    font-size: 0.95rem;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    color: bisque;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: bisque;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .topnav h1 {
+        margin-bottom: 1rem;
+    }
+
+    .topnav nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
 }

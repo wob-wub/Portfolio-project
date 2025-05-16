@@ -1,3 +1,4 @@
+/* Top Navigation Bar */
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -16,7 +17,7 @@
 
 .topnav nav ul li a {
     text-decoration: none;
-    color: bisque; 
+    color: bisque;
     font-family: "Rowdies", sans-serif;
     font-size: 1rem;
     font-weight: normal;
@@ -24,9 +25,8 @@
 
 .topnav nav ul li a:hover {
     text-decoration: none;
-    color: white; /* Pink color */
+    color: white;
 }
-
 
 .topnav h1 a {
     text-decoration: none;
@@ -36,6 +36,7 @@
     color: bisque;
     font-style: normal;
 }
+
 .topnav h1 a:hover {
     text-decoration: none;
     color: bisque;
@@ -47,35 +48,171 @@
     margin-right: 10px;
     align-items: center;
 }
-body{
-    background-color: gray;
+
+/* Body Styling */
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Hind Madurai", sans-serif;
 }
+
+/* Main Section Layout */
 main {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; 
-    gap: 2rem; 
+    align-items: flex-start;
+    gap: 2rem;
     padding: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
+/* Section Content */
 .section {
-   font-size: medium;
-   font-family: "Hind Madurai", sans-serif;
-
+    font-size: medium;
+    font-family: "Hind Madurai", sans-serif;
 }
-#titles{
+
+#titles {
     flex: 1;
 }
 
+#titles h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: bisque;
+}
+
+#titles h2 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: white;
+}
 
 #about {
     flex: 2;
 }
 
+#about h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: bisque;
+}
+
+#about p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Buttons */
 .bottom-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     padding: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.bottom-buttons button {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    background-color: bisque;
+    color: #333;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bottom-buttons button:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer (if used) */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    color: bisque;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: bisque;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    #titles, #about {
+        width: 100%;
+        text-align: center;
+    }
+
+    #titles h1 {
+        font-size: 2rem;
+    }
+
+    #about h1 {
+        font-size: 1.5rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    .bottom-buttons {
+        flex-direction: column;
+    }
+
+    .topnav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .topnav h1 {
+        margin-bottom: 1rem;
+    }
+
+    .topnav nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
